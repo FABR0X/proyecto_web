@@ -1,0 +1,419 @@
+:root {
+    --color-primario: #121212;
+    --color-secundario: #E2B616;
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --color-card: #1a1a1a;
+    --color-card-hover: #333333;
+    --fuente-titulos: 'Bebas Neue', sans-serif;
+    --fuente-cuerpo: 'Poppins', sans-serif;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-align: justify;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li::marker {
+    color: var(--color-secundario);
+}
+
+.encabezado {
+    background: var(--color-primario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-md) 0;
+}
+
+.encabezado .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--color-secundario);
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+.nav-links a {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.btn-cuenta {
+    background-color: var(--color-secundario);
+    color: var(--color-primario) !important;
+    font-weight: 700 !important;
+}
+
+main {
+    padding-top: 80px;
+}
+
+.seccion {
+    min-height: 100vh;
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-secundario);
+}
+
+.destacado {
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.contenido {
+    max-width: 800px;
+}
+
+.contenido p {
+    margin-bottom: var(--spacing-md);
+}
+
+.subgeneros-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.subgeneros-list li {
+    background: var(--color-card);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.subgeneros-list li:hover {
+    background: var(--color-secundario);
+    color: var(--color-primario);
+    transform: translateY(-5px);
+}
+
+.director {
+    background: var(--color-card);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.director:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.director h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secundario);
+}
+
+.director-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.director-foto {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.mapa-container {
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.mapa-container h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secundario);
+}
+
+.mapa-container iframe {
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filmografia h3 {
+    font-family: var(--fuente-titulos);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.image-map-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.peliculas-fincher {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: var(--spacing-lg);
+    background: var(--color-card);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.peliculas-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.peliculas-table th {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    color: var(--color-secundario);
+    padding: var(--spacing-md);
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.peliculas-table td {
+    padding: var(--spacing-md);
+    vertical-align: top;
+    border-bottom: 1px solid var(--color-card-hover);
+}
+
+.peliculas-table tr:hover td {
+    background-color: var(--color-card-hover);
+}
+
+.pelicula-lista {
+    width: 150px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.peliculas-table tr:hover .pelicula-lista {
+    transform: scale(1.05);
+}
+
+.footer {
+    background: var(--color-primario);
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-xl);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.footer-logo p {
+    margin-top: var(--spacing-sm);
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secundario);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a:hover {
+    color: var(--color-secundario);
+}
+
+.footer-contact p {
+    margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .encabezado .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .director-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .director-foto {
+        max-width: 200px;
+        margin: 0 auto var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .pelicula-lista {
+        width: 100px;
+    }
+
+    .mapa-container iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seccion {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .pelicula-lista {
+        width: 80px;
+    }
+    
+    .peliculas-table th {
+        font-size: 1.2rem;
+    }
+
+    .mapa-container iframe {
+        height: 200px;
+    }
+}
+
+.audio-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.audio-control:hover {
+    transform: scale(1.1);
+}
+
+.audio-control::after {
+    content: "🔊";
+}
+
+#background-audio:not(:playing) + .audio-control::after {
+    content: "🔇";
+}
